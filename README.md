@@ -25,4 +25,3 @@ pip install -r requirements.txt
 
 jupyter notebook
 
-# una modificacion de prueba
