@@ -1,0 +1,27 @@
+
+ESTADÍSTICAS DE RECOLECCIÓN INICIAL
+=====================================
+App ID: com.walletapp.mobile
+Fecha de scraping: 2025-09-28 21:06:04
+
+VOLUMEN DE DATOS:
+• Total comentarios: 52
+• Rango temporal: 2024-09-05 → 2025-09-26
+• Días cubiertos: 386
+
+DISTRIBUCIÓN DE PUNTUACIONES:
+• 1 estrellas: 38 (73.1%)
+• 2 estrellas: 2 (3.8%)
+• 3 estrellas: 2 (3.8%)
+• 4 estrellas: 2 (3.8%)
+• 5 estrellas: 8 (15.4%)
+
+MÉTRICAS DE CONTENIDO:
+• Promedio caracteres: 78
+• Comentario más largo: 338 caracteres
+• Comentario más corto: 6 caracteres
+
+ACTIVIDAD TEMPORAL:
+• Comentarios último mes: 8
+• Comentarios últimos 7 días: 2
+• Puntuación promedio: 1.85/5.0

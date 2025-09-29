@@ -1,0 +1,27 @@
+
+ESTADÍSTICAS DE RECOLECCIÓN INICIAL
+=====================================
+App ID: com.busa.wallet
+Fecha de scraping: 2025-09-28 21:04:17
+
+VOLUMEN DE DATOS:
+• Total comentarios: 1,076
+• Rango temporal: 2024-07-05 → 2025-09-27
+• Días cubiertos: 449
+
+DISTRIBUCIÓN DE PUNTUACIONES:
+• 1 estrellas: 220 (20.4%)
+• 2 estrellas: 53 (4.9%)
+• 3 estrellas: 47 (4.4%)
+• 4 estrellas: 62 (5.8%)
+• 5 estrellas: 694 (64.5%)
+
+MÉTRICAS DE CONTENIDO:
+• Promedio caracteres: 62
+• Comentario más largo: 497 caracteres
+• Comentario más corto: 5 caracteres
+
+ACTIVIDAD TEMPORAL:
+• Comentarios último mes: 81
+• Comentarios últimos 7 días: 29
+• Puntuación promedio: 3.89/5.0
