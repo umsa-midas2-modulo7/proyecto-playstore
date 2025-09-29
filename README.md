@@ -1,27 +1,47 @@
-# Proyecto Playstore
+# Proyecto: PlayStore
 
-# 1. Instala Python y pip (si no los tienes)
+Este repositorio implementa un pipeline de adquisición, limpieza y almacenamiento de datos de reseñas de Google Play, siguiendo los objetivos de la tarea.
 
-sudo apt update
-sudo apt install python3 python3-pip python3-venv -y
+### Modulo 7
+### Proyecto PlayStore
 
-# 2. Crea un entorno virtual
+# Integrantes
 
-python3 -m venv venv
+- Noemi
+- Marco
+- Victor
 
-# 3. Activa el entorno
+## 📂 Estructura del proyecto
 
-source venv/bin/activate
+```bash
+proyecto-playstore/
+├── data/
+│   ├── raw/              # datos crudos desde Google Play y CSV externos
+│   ├── clean/            # datos después de limpieza
+│   ├── processed/        # datos transformados/listos para análisis
+│   └── external/         # segunda fuente de datos (CSV, etc.)
+│
+├── notebooks/
+│   ├── 01_ingesta.ipynb          # ingesta de datos
+│   ├── 02_limpieza.ipynb         # limpieza de datos
+│   ├── 03_validacion.ipynb       # validaciones de calidad de datos (great_expectations)
+│   ├── 04_almacenamiento.ipynb   # almacenamiento de datos
+│   ├── 05_pipeline.ipynb         # pipeline de datos
+│   └── experiments/              # notebooks auxiliares de pruebas
+│
+├── src/
+│   ├── ingest.py         # lógica de ingesta de reseñas
+│   ├── clean.py          # reglas de limpieza
+│   ├── validate.py       # validaciones de calidad de datos (great_expectations)
+│   └── pipeline.py       # pipeline completo
+│
+├── models/               # almacenamiento de modelos ML
+├── predictions/          # resultados de predicciones
+├── dags/                 # DAGs de Airflow (orquestación)
+├── docs/                 # reportes y documentación
+│
+├── README.md             # documentación del proyecto
+├── INSTRUCTIONS.md       # instrucciones de instalación
+└── requirements.txt      # librerías necesarias
 
-# 4. Actualizar PIP
-
-python -m pip install --upgrade pip
-
-# 5. Instala librerias
-
-pip install -r requirements.txt
-
-# 6. Levantar el proyecto
-
-jupyter notebook
 

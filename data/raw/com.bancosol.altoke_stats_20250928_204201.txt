@@ -1,0 +1,27 @@
+
+ESTADÍSTICAS DE RECOLECCIÓN INICIAL
+=====================================
+App ID: com.bancosol.altoke
+Fecha de scraping: 2025-09-28 20:42:01
+
+VOLUMEN DE DATOS:
+• Total comentarios: 1,552
+• Rango temporal: 2024-05-16 → 2025-09-27
+• Días cubiertos: 499
+
+DISTRIBUCIÓN DE PUNTUACIONES:
+• 1 estrellas: 812 (52.3%)
+• 2 estrellas: 108 (7.0%)
+• 3 estrellas: 91 (5.9%)
+• 4 estrellas: 75 (4.8%)
+• 5 estrellas: 466 (30.0%)
+
+MÉTRICAS DE CONTENIDO:
+• Promedio caracteres: 77
+• Comentario más largo: 499 caracteres
+• Comentario más corto: 5 caracteres
+
+ACTIVIDAD TEMPORAL:
+• Comentarios último mes: 82
+• Comentarios últimos 7 días: 25
+• Puntuación promedio: 2.53/5.0

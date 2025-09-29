@@ -1,0 +1,27 @@
+
+ESTADÍSTICAS DE RECOLECCIÓN INICIAL
+=====================================
+App ID: bo.com.yolopago
+Fecha de scraping: 2025-09-28 21:01:29
+
+VOLUMEN DE DATOS:
+• Total comentarios: 2,725
+• Rango temporal: 2022-02-10 → 2025-09-27
+• Días cubiertos: 1325
+
+DISTRIBUCIÓN DE PUNTUACIONES:
+• 1 estrellas: 937 (34.4%)
+• 2 estrellas: 116 (4.3%)
+• 3 estrellas: 114 (4.2%)
+• 4 estrellas: 152 (5.6%)
+• 5 estrellas: 1,406 (51.6%)
+
+MÉTRICAS DE CONTENIDO:
+• Promedio caracteres: 66
+• Comentario más largo: 500 caracteres
+• Comentario más corto: 5 caracteres
+
+ACTIVIDAD TEMPORAL:
+• Comentarios último mes: 150
+• Comentarios últimos 7 días: 18
+• Puntuación promedio: 3.36/5.0
