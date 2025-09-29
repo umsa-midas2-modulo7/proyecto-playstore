@@ -30,6 +30,8 @@ proyecto-playstore/
 │   └── experiments/              # notebooks auxiliares de pruebas
 │
 ├── src/
+│   ├── common/           # lógica común
+│   ├── interfaces/       # interfaces de usuario
 │   ├── ingest.py         # lógica de ingesta de reseñas
 │   ├── clean.py          # reglas de limpieza
 │   ├── validate.py       # validaciones de calidad de datos (great_expectations)
