@@ -7,7 +7,7 @@ class AppConstants:
         {"app_id": "com.bancosol.altoke", "name": "Altoke"},
         {"app_id": "com.bcp.bo.wallet", "name": "Yape"},
         {"app_id": "bo.com.yolopago", "name": "YoloPago"}, 
-        {"app_id": "com.busa.wallet", "name": "Busa"},
+        {"app_id": "com.busa.wallet", "name": "Yasta"},
         {"app_id": "com.walletapp.mobile", "name": "WalletApp"}
     ]
 
@@ -19,6 +19,6 @@ class AppConstants:
         App(app_id="com.bancosol.altoke", name="Altoke"),
         App(app_id="com.bcp.bo.wallet", name="Yape"),
         App(app_id="bo.com.yolopago", name="YoloPago"), 
-        App(app_id="com.busa.wallet", name="Busa"),
+        App(app_id="com.busa.wallet", name="Yasta"),
         App(app_id="com.walletapp.mobile", name="WalletApp")
     ]
