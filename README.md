@@ -28,22 +28,22 @@ proyecto-playstore/
 │   ├── 04_almacenamiento.ipynb   # almacenamiento de datos
 │   ├── 05_pipeline.ipynb         # pipeline de datos
 │   └── experiments/              # notebooks auxiliares de pruebas
+│── dags/                 # DAGs de Airflow (orquestación)
+│   ├── __init__.py
+│   ├── ingest_dag.py
+│   ├── clean_dag.py
+│   ├── pipeline_dag.py
+│   └── validate_dag.py
 │
 ├── src/
 │   ├── common/           # lógica común
 │   ├── interfaces/       # interfaces de usuario
-│   ├── etl/              # <--- nuevo directorio (o "ingest", como prefieras)
-│   │   ├── __init__.py
-│   │   ├── ingest.py  
-│   │   ├── clean.py
-│   │   ├── pipeline.py
-│   │   └── validate.py
-│   └── dags/                 # DAGs de Airflow (orquestación)
+│   └── etl/              # <--- nuevo directorio (o "ingest", como prefieras)
 │       ├── __init__.py
-│       ├── ingest_dag.py
-│       ├── clean_dag.py
-│       ├── pipeline_dag.py
-│       └── validate_dag.py
+│       ├── ingest.py  
+│       ├── clean.py
+│       ├── pipeline.py
+│       └── validate.py
 ├── models/               # almacenamiento de modelos ML
 ├── predictions/          # resultados de predicciones
 ├── docs/                 # reportes y documentación
