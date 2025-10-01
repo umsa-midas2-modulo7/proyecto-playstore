@@ -58,3 +58,24 @@ def reviews_por_fecha_exp(app_id, fecha: date = None):
             break
         time.sleep(random.uniform(5, 10))
     return all_app_reviews
+
+"""
+Recolecta reseñas para varias apps y devuelve una lista (no guarda archivos).
+- fecha: si se pasa, trae reseñas desde esa fecha; si es None, usa hoy (misma lógica que arriba).
+- app_ids: lista de IDs de apps; si es None, intenta usar DEFAULT_APP_IDS.
+"""
+def get_app_reviews(fecha: date = None):
+    app_ids = [
+        "com.bancosol.altoke",   # Altoke
+        "com.bcp.bo.wallet",     # Yape
+        "bo.com.yolopago",       # YoloPago
+        "com.busa.wallet",       # Yasta
+        "com.walletapp.mobile"   # Bille
+    ]
+    all_reviews = []
+    for app in app_ids:
+        print(f"recolectando {app} ...")
+        app_reviews = reviews_por_fecha_exp(app, fecha)
+        all_reviews.extend(app_reviews)
+        print(f"finalizado de {app}")
+    return all_reviews
