@@ -73,18 +73,12 @@ def get_app_reviews(fecha: date = None):
         all_reviews.extend(app_reviews)
         print(f"...finalizado de {app}")
     df = pd.DataFrame(all_reviews)
-    '''
-    df.to_csv(f"../data/restore/{df2['at'].dt.date.max()}_comentarios_app.csv",   index=False, encoding="utf-8-sig")
-    print("Total de reseñas guardadas:", len(df))
-    '''
+
     print(f"Total de reseñas descargadas: {len(df)}\nen fecha: {fecha}")
-    print(df)
+    return df
 
 
-print(app_ids)
-la_fecha = date(2025, 9, 29)
-get_app_reviews(la_fecha)
-
-
-if __name__ == "__main__":
-    print()
+def save_to_csv(df):
+    df.to_csv(f"../data/restore/{df['at'].dt.date.max()}_comentarios_app.csv",
+              index=False, encoding="utf-8-sig")
+    print("Total de reseñas guardadas:", len(df))
