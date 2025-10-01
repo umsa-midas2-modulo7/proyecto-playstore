@@ -17,21 +17,18 @@ app_ids = AppConstants.APP_IDS
 
 
 def get_reviews(result, app_id, fecha):
-    resenas = []
-    hoy = date.today()  # para la fecha de hoy
-    token = True  # Inicializar como True para indicar que seguimos
-
+    resenas = []               # lista donde se guardan las reseñas filtradas
+    hoy = date.today()         # fecha de hoy (default si no se pasa otra fecha)
+    token = True               # controla si seguimos paginando
     for r in result:
         review_date = pd.Timestamp(r['at']).normalize()
         comparison_date = fecha if fecha else hoy
-
         if review_date.date() >= comparison_date:
             r['app_id'] = app_id
             resenas.append(r)
         else:
             token = None  # Detener la paginación si la reseña es más antigua
             break
-
     return resenas, token
 
 
