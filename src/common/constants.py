@@ -1,3 +1,4 @@
+# src/common/constants.py
 from typing import Final, List
 from interface.app import AppInfo, App
 

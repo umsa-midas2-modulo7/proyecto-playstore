@@ -18,3 +18,59 @@ __pycache__/
 
 # Salidas de Jupyter
 *.out
+
+# ---- Airflow ----
+# Logs generados por Airflow
+logs/
+*.log
+*.pid
+
+# Archivos de ejecución temporal
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+
+# SQLite DB (si usas backend local)
+airflow.db
+airflow.db-journal
+
+# Configuración sensible (usar .env.example en su lugar)
+.env
+.env.*
+
+# Archivos de DAG compilados o temporales
+dags/__pycache__/
+dags/*.pyc
+dags/*.pyo
+
+# Plugins compilados
+plugins/__pycache__/
+plugins/*.pyc
+plugins/*.pyo
+
+# ---- Docker ----
+# Volúmenes montados
+*/.venv
+*/venv
+.venv/
+venv/
+.envrc
+
+# Archivos generados por docker
+*.pid
+*.sock
+*.swp
+
+# Archivos de backup
+*~
+
+# ---- IDEs / Herramientas ----
+# PyCharm / IntelliJ
+.idea/
+# VSCode
+.vscode/
+# Otros
+.DS_Store
+Thumbs.db

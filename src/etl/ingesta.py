@@ -1,4 +1,4 @@
-# ingest.py  (NO ejecutar nada al importar)
+# src/etl/ingesta.py  (NO ejecutar nada al importar)
 import time, random
 from datetime import date
 import pandas as pd
