@@ -1,0 +1,96 @@
+services:
+  airflow-init:
+    image: ${AIRFLOW_IMAGE_NAME}
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      # Conexión al Postgres existente
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: >-
+        postgresql+psycopg2://${AF_DB_USER}:${AF_DB_PASS}@${AF_DB_HOST}:${AF_DB_PORT}/${AF_DB_NAME}
+      # Usar tu esquema "apache_airflow" para el metastore
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: apache_airflow
+      # Usuario admin para el UI
+      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME}
+      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD}
+      # Opcional: no cargar DAGs de ejemplo
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      PYTHONPATH: /opt/airflow
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/opt/airflow/requirements.txt
+    command: >
+      bash -c "
+      airflow db init &&
+      airflow users create
+        --username \$${_AIRFLOW_WWW_USER_USERNAME}
+        --firstname Admin
+        --lastname User
+        --role Admin
+        --email admin@example.com
+        --password \$${_AIRFLOW_WWW_USER_PASSWORD}
+      "
+
+  webserver:
+    image: ${AIRFLOW_IMAGE_NAME}
+    depends_on:
+      - airflow-init
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: >-
+        postgresql+psycopg2://${AF_DB_USER}:${AF_DB_PASS}@${AF_DB_HOST}:${AF_DB_PORT}/${AF_DB_NAME}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: apache_airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      PYTHONPATH: /opt/airflow
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/opt/airflow/requirements.txt
+    command: webserver
+
+  scheduler:
+    image: ${AIRFLOW_IMAGE_NAME}
+    depends_on:
+      - airflow-init
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: >-
+        postgresql+psycopg2://${AF_DB_USER}:${AF_DB_PASS}@${AF_DB_HOST}:${AF_DB_PORT}/${AF_DB_NAME}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: apache_airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      PYTHONPATH: /opt/airflow
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/opt/airflow/requirements.txt
+    command: scheduler
+
+  triggerer:
+    image: ${AIRFLOW_IMAGE_NAME}
+    depends_on:
+      - airflow-init
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: >-
+        postgresql+psycopg2://${AF_DB_USER}:${AF_DB_PASS}@${AF_DB_HOST}:${AF_DB_PORT}/${AF_DB_NAME}
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: apache_airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: ${AIRFLOW__CORE__LOAD_EXAMPLES}
+      PYTHONPATH: /opt/airflow
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./requirements.txt:/opt/airflow/requirements.txt
+    command: triggerer

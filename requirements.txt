@@ -1,5 +1,6 @@
 pandas
 numpy
+<<<<<<< HEAD
 scikit-learn
 matplotlib
 seaborn
@@ -11,3 +12,13 @@ google-play-scraper
 nltk
 pyspellchecker
 spacy
+=======
+#scikit-learn
+#matplotlib
+#seaborn
+#jupyterlab
+#notebook
+#xgboost
+
+google-play-scraper
+>>>>>>> 3e51669f914d70c641bb80ac4fa9fd3fa9439fbe
