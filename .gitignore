@@ -1,6 +1,7 @@
 # Entorno virtual
 venv/
 .venv/
+.venv_ge/
 
 # Archivos de Jupyter
 .ipynb_checkpoints/

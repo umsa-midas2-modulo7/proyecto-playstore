@@ -1,6 +1,5 @@
-
-#pandas
-#numpy
+pandas
+numpy
 #scikit-learn
 #matplotlib
 #seaborn
@@ -8,23 +7,4 @@
 #notebook
 #xgboost
 
-#google-play-scraper
-
-# Núcleo de análisis
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.1
-scipy==1.10.1
-
-# Visualización
-matplotlib==3.9.2
-seaborn==0.13.2
-
-# Jupyter
-jupyterlab==4.2.5
-notebook==7.2.2
-ipykernel==6.29.5
-
-# Great Expectations
-great_expectations==0.18.13
-
+google-play-scraper
