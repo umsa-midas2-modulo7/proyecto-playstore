@@ -20,5 +20,4 @@ ipykernel==6.29.5
 great_expectations==0.18.13
 spacy
 nltk
-python -m spacy download es_core_news_sm
-nltk.download("stopwords")
+genderize
