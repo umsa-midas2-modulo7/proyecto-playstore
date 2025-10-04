@@ -21,8 +21,7 @@ great_expectations==0.18.13
 spacy
 nltk
 <<<<<<< HEAD
-genderize
+
 =======
-#python -m spacy download es_core_news_sm
-#nltk.download("stopwords")
+
 >>>>>>> 0c19523f29d8636f42ec7970d119b4a81a0859aa

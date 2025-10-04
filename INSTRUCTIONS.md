@@ -14,6 +14,7 @@ source venv/bin/activate
 # 4. Actualizar PIP
 
 python -m pip install --upgrade pip
+python.exe -m pip install --upgrade pip
 
 # 5. Instala librerias
 
