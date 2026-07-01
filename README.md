@@ -53,3 +53,4 @@ proyecto-playstore/
 └── requirements.txt      # librerías necesarias
 
 
+prueba edicion
